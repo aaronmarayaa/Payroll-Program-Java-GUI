@@ -33,5 +33,9 @@ public class Received extends JPanel {
                 signature.setBounds(140,110, 100,20);
             add(signature);
     }
+    // updates `employee_name` whenever `setEmployeeName()` method is called
+    public void setEmployeeName(String NameOfEmployee){
+        employee_name.setText(NameOfEmployee);
+    }
 }
 
