@@ -37,4 +37,8 @@ public class PaymentComputationPanel extends JPanel {
             received_panel.add(received, BorderLayout.SOUTH);
         add(received_panel, BorderLayout.EAST);   
     }
+    // gets received instance
+    public static Received getReceivedPanel(){
+        return received;
+    }
 }
