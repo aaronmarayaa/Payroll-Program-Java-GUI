@@ -57,6 +57,14 @@ public class EmployeeInformation extends JPanel {
             
             employeeName_textField = new JTextField();
                 employeeName_textField.setBounds(400, 15, 200, 20);
+                employeeName_textField.addActionListener(e ->{
+                    // Get the text from the employeeName_textField
+                    String employee = employeeName_textField.getText();
+                    
+                    // calls Received panel as a representation of `.getReceivedPanel()`
+                    // then call the method `.setEmployeeNameText();` and pass `employeeName`
+                    PaymentComputationPanel.getReceivedPanel().setEmployeeName(employee);
+                });
             add(employeeName_textField);
             
             address_textField = new JTextField();
