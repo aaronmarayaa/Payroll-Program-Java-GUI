@@ -1,6 +1,7 @@
 package com.mycompany.payrollprogram;
 
 import com.mycompany.Buttons.Buttons;
+import com.mycompany.Computations.Computation;
 import com.mycompany.Informations.InformationPanel;
 import com.mycompany.Computations.PaymentComputationPanel;
 import java.awt.BorderLayout;
@@ -27,8 +28,8 @@ public class PayrollProgram extends JFrame{
         InformationPanel informationPanel = new InformationPanel();
         add(informationPanel, BorderLayout.NORTH);
         
-        PaymentComputationPanel salaryComputations = new PaymentComputationPanel();
-        add(salaryComputations, BorderLayout.CENTER);
+        Computation paymentComputationPanel = new Computation();
+        add(paymentComputationPanel, BorderLayout.CENTER);
         
         // from Buttons.java file
         Buttons buttons = new Buttons(frame);
