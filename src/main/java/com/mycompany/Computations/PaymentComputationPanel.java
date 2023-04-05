@@ -1,6 +1,5 @@
 package com.mycompany.Computations;
 
-import com.mycompany.Informations.EmployeeInformation;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import javax.swing.JPanel;
@@ -35,7 +34,7 @@ public class PaymentComputationPanel extends JPanel {
         received = new Received();
         JPanel received_panel = new JPanel(new BorderLayout());
             received_panel.add(received, BorderLayout.SOUTH);
-        add(received_panel, BorderLayout.EAST);   
+        add(received_panel, BorderLayout.EAST);
     }
     // gets received instance
     public static Received getReceivedPanel(){
