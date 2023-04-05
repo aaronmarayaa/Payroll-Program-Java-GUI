@@ -9,7 +9,13 @@ import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
 public class Summary extends JPanel {
-    Summary() {
+    
+    private JTextField grossPayPhp_textField;
+    private JTextField totalAllowancePhp_textField;
+    private JTextField totalDeductionsPhp_textField;
+    private JTextField netPayPhp_textField;
+    
+    public Summary() {
             setLayout(null);
             
          TitledBorder summary_border = BorderFactory.createTitledBorder("Summary");
@@ -37,21 +43,33 @@ public class Summary extends JPanel {
             add(netPayPhp);
             
             //Text Fields
-            JTextField grossPayPhp_textField = new JTextField();
+            grossPayPhp_textField = new JTextField();
                 grossPayPhp_textField.setBounds(200, 40, 100, 20);
             add(grossPayPhp_textField);
                 
-            JTextField totalAllowancePhp_textField = new JTextField();
+            totalAllowancePhp_textField = new JTextField();
                 totalAllowancePhp_textField.setBounds(200, 65, 100, 20);
             add(totalAllowancePhp_textField);
                 
-            JTextField totalDeductionsPhp_textField = new JTextField();
+            totalDeductionsPhp_textField = new JTextField();
                 totalDeductionsPhp_textField.setBounds(200, 90, 100, 20);
             add(totalDeductionsPhp_textField);
                 
-            JTextField netPayPhp_textField = new JTextField();
+            netPayPhp_textField = new JTextField();
                 netPayPhp_textField.setBounds(200, 115, 100, 20);
             add(netPayPhp_textField);
                 
+    }
+    public JTextField getGrossPayPhpTextField(){
+        return grossPayPhp_textField;
+    }
+    public JTextField getTotalAllowancePhpTextField(){
+        return totalAllowancePhp_textField;
+    }
+    public JTextField getTotalDeductionsPhpTextField(){
+        return totalDeductionsPhp_textField;
+    }
+    public JTextField getNetPayPhpTextField(){
+        return netPayPhp_textField;
     }
 }
