@@ -5,6 +5,9 @@ import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 public class InformationPanel extends JPanel {
+    
+    private SalaryInformation salaryInformation;
+    
     public InformationPanel() {
         setLayout(new BorderLayout());
         
@@ -16,10 +19,14 @@ public class InformationPanel extends JPanel {
             employeeInfo_panel.add(employeeInfo);
         add(employeeInfo_panel, BorderLayout.CENTER);
         
-        SalaryInformation salaryInfo = new SalaryInformation();
-        JPanel salaryInfo_panel = new JPanel(new BorderLayout());
-            salaryInfo_panel.setBorder(BorderFactory.createEmptyBorder(5, 0, 5, 0));
-            salaryInfo_panel.add(salaryInfo);
-        add(salaryInfo_panel, BorderLayout.SOUTH);
+            salaryInformation = new SalaryInformation();
+            JPanel salaryInfo_panel = new JPanel(new BorderLayout());
+                salaryInfo_panel.setBorder(BorderFactory.createEmptyBorder(5, 0, 5, 0));
+                salaryInfo_panel.add(salaryInformation);
+            add(salaryInfo_panel, BorderLayout.SOUTH);
+        }
+    // get `salaryInformation` making it accessable in `Computation` Panel
+    public SalaryInformation getSalaryInformation() {
+        return salaryInformation;
     }
 }
