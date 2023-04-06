@@ -7,25 +7,28 @@ import javax.swing.JPanel;
 public class PaymentComputationPanel extends JPanel {
             
     private static Received received;
+    private static Deductions deductions;
+    private static Summary summary;
+    private static Earnings earnings;
     
     public PaymentComputationPanel() {
 
         setLayout(new GridLayout(2, 2, 5, 0));
         
         // earnings panel
-        Earnings earnings = new Earnings();
+        earnings = new Earnings();
         JPanel earnings_panel = new JPanel(new BorderLayout());
             earnings_panel.add(earnings, BorderLayout.NORTH);
         add(earnings_panel, BorderLayout.WEST);
         
         // deductions panel
-        Deductions deductions = new Deductions();
+        deductions = new Deductions();
         JPanel deductions_panel = new JPanel(new BorderLayout());
             deductions_panel.add(deductions, BorderLayout.NORTH);
         add(deductions_panel, BorderLayout.EAST);
         
         //summary panel
-        Summary summary = new Summary();
+        summary = new Summary();
         JPanel summary_panel = new JPanel(new BorderLayout());
             summary_panel.add(summary,BorderLayout.SOUTH);
         add(summary_panel, BorderLayout.WEST);
@@ -36,8 +39,17 @@ public class PaymentComputationPanel extends JPanel {
             received_panel.add(received, BorderLayout.SOUTH);
         add(received_panel, BorderLayout.EAST);
     }
-    // gets received instance
-    public static Received getReceivedPanel(){
+    // gets panels instance
+    public static final Received getReceivedPanel(){
         return received;
+    }
+    public static final Deductions getDeductionsPanel(){
+        return deductions;
+    }
+    public static final Summary getSummaryPanel(){
+        return summary;
+    }
+    public static final Earnings getEarnigsPanel(){
+        return earnings;
     }
 }
