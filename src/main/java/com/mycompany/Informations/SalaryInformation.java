@@ -22,8 +22,9 @@ public class SalaryInformation extends JPanel {
     private JTextField late_textField;
     private JTextField salaryRate_textField;
     private JTextField salaryLevel_textField;
+    private JButton compute_button;
     
-    SalaryInformation() {
+    public SalaryInformation() {
             setLayout(null);
             
         TitledBorder salary_border = BorderFactory.createTitledBorder("Salary Information");
@@ -129,9 +130,41 @@ public class SalaryInformation extends JPanel {
                 });
             add(ok_button);
             
-            JButton compute_button = new JButton("Compute");
+            compute_button = new JButton("Compute");
                 compute_button.setBounds(300, 70, 100 ,20);
             add(compute_button);
-            
+    }
+    public JButton getComputeButton(){
+        return compute_button;
+    }
+    // get text fields
+    public JTextField getSalaryLevelTextField(){
+        return salaryLevel_textField;
+    }
+    public JTextField getSalaryRateTextField(){
+        return salaryRate_textField;
+    }
+    public JTextField getLateTextField(){
+        return late_textField;
+    }
+    public JTextField getAbsentTextField(){
+        return absent_textField;
+    }
+    public JTextField getHoursWorkingTextField(){
+        return hoursWorking_textField;
+    }
+    public JTextField getHoursOvertimeTextField(){
+        return hoursOvertime_textField;
+    }
+    
+    //regular pay
+    public JTextField getRegularPayTextField(){
+        return regularPay_textField;
+    }
+    public JTextField getOvertimePayTextField(){
+        return overtimePay_textField;
+    }
+    public JTextField getGrossPayTextField(){
+        return grossPay_textField;
     }
 }
