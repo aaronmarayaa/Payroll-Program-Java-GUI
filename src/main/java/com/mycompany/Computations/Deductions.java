@@ -10,12 +10,12 @@ import javax.swing.border.TitledBorder;
 
 public class Deductions extends JPanel {
     
-    protected JTextField totalDeductions_textField;
-    protected JTextField tardiness_textField;
-    protected JTextField taxWithheld_textField;
-    protected JTextField gsis_textField;
-    protected JTextField loanSSS_textField;
-    protected JTextField peraSSS_textField;
+    private JTextField totalDeductions_textField;
+    private JTextField tardiness_textField;
+    private JTextField taxWithheld_textField;
+    private JTextField gsis_textField;
+    private JTextField loanSSS_textField;
+    private JTextField peraSSS_textField;
     
     Deductions() {
             setLayout(null);
@@ -84,5 +84,23 @@ public class Deductions extends JPanel {
             totalDeductions_textField = new JTextField();
                 totalDeductions_textField.setBounds(200,135, 100, 15);
             add(totalDeductions_textField);
+    }
+    public JTextField getPeraSSSTextField(){
+        return peraSSS_textField;
+    }
+    public JTextField getLoanSSSTextField(){
+        return loanSSS_textField;
+    }
+    public JTextField getGSISTextField(){
+        return gsis_textField;
+    }
+    public JTextField getTaxWithheldTextField(){
+        return taxWithheld_textField;
+    }
+    public JTextField getTardinessTextField(){
+        return tardiness_textField;
+    }
+    public JTextField getTotalDeductionsTextField(){
+        return totalDeductions_textField;
     }
 }
