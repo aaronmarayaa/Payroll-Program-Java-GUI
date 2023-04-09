@@ -156,8 +156,6 @@ public class SalaryInformation extends JPanel {
     public JTextField getHoursOvertimeTextField(){
         return hoursOvertime_textField;
     }
-    
-    //regular pay
     public JTextField getRegularPayTextField(){
         return regularPay_textField;
     }
