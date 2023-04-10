@@ -6,7 +6,8 @@ import javax.swing.JPanel;
 
 public class InformationPanel extends JPanel {
     
-    private SalaryInformation salaryInformation;
+    private static SalaryInformation salaryInformation;
+    private static EmployeeInformation employeeInformation;
     
     public InformationPanel() {
         setLayout(new BorderLayout());
@@ -14,9 +15,9 @@ public class InformationPanel extends JPanel {
         TitleDatePanel titleDatePanel = new TitleDatePanel();
         add(titleDatePanel, BorderLayout.NORTH);
         
-        EmployeeInformation employeeInfo = new EmployeeInformation();
+        employeeInformation = new EmployeeInformation();
         JPanel employeeInfo_panel = new JPanel(new BorderLayout());
-            employeeInfo_panel.add(employeeInfo);
+            employeeInfo_panel.add(employeeInformation);
         add(employeeInfo_panel, BorderLayout.CENTER);
         
             salaryInformation = new SalaryInformation();
@@ -26,7 +27,10 @@ public class InformationPanel extends JPanel {
             add(salaryInfo_panel, BorderLayout.SOUTH);
         }
     // get `salaryInformation` making it accessable in `Computation` Panel
-    public SalaryInformation getSalaryInformation() {
+    public static final SalaryInformation getSalaryInformation() {
         return salaryInformation;
+    }
+    public static final EmployeeInformation getEmployeeInformationPanel(){
+        return employeeInformation;
     }
 }
