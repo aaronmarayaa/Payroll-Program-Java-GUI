@@ -11,8 +11,8 @@ public class Received extends JPanel {
         JLabel employee_name;
         
     public Received() {
-        setLayout(null);
         
+        setLayout(null);
         setBackground(new Color(128, 128, 255));
         setPreferredSize(new Dimension(100, 150));
         
@@ -36,6 +36,9 @@ public class Received extends JPanel {
     // updates `employee_name` whenever `setEmployeeName()` method is called
     public void setEmployeeName(String nameOfEmployee){
         employee_name.setText(nameOfEmployee);
+    }
+    public void clearEmployeeName(){
+        employee_name.setText("");
     }
 }
 
