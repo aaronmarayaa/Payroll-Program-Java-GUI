@@ -2,6 +2,7 @@ package com.mycompany.Computations;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.lang.reflect.Field;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -18,9 +19,9 @@ public class Deductions extends JPanel {
     private JTextField peraSSS_textField;
     
     Deductions() {
+        
             setLayout(null);
-            
-        TitledBorder deductions_border = BorderFactory.createTitledBorder("Deductions");
+            TitledBorder deductions_border = BorderFactory.createTitledBorder("Deductions");
             deductions_border.setTitleColor(Color.BLUE);
             setBorder(deductions_border);
             setBackground(new Color(128, 128, 255));
@@ -102,5 +103,15 @@ public class Deductions extends JPanel {
     }
     public JTextField getTotalDeductionsTextField(){
         return totalDeductions_textField;
+    }
+    // clear all text fields
+    public void clearDeductionsTextFields() throws IllegalAccessException {
+        Field[] fields = this.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            if (field.getType().equals(JTextField.class)) {
+                JTextField textField = (JTextField) field.get(this);
+                textField.setText("");
+            }
+        }
     }
 }
