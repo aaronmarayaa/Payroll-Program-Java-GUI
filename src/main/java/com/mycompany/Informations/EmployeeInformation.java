@@ -3,6 +3,7 @@ package com.mycompany.Informations;
 import com.mycompany.Computations.PaymentComputationPanel;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.lang.reflect.Field;
 import javax.swing.BorderFactory;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -68,5 +69,15 @@ public class EmployeeInformation extends JPanel {
             address_textField = new JTextField();
                 address_textField.setBounds(400, 40, 200, 20);
             add(address_textField);
+    }
+    // clear all text fields
+    public void clearEmployeePanelTextFields() throws IllegalAccessException {
+        Field[] fields = this.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            if (field.getType().equals(JTextField.class)) {
+                JTextField textField = (JTextField) field.get(this);
+                textField.setText("");
+            }
+        }
     }
 }
