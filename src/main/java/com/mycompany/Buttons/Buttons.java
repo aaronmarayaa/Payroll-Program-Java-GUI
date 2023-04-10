@@ -1,21 +1,32 @@
 package com.mycompany.Buttons;
 
+import com.mycompany.Computations.PaymentComputationPanel;
+import com.mycompany.Informations.InformationPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 public class Buttons extends JPanel{
     
-    private ArrayList<JTextField> textFields;
-
     public Buttons(JFrame frame) {
+        
         add(new JButton("Print"));
         
         JButton clear = new JButton("Clear");
+            clear.addActionListener(e -> {
+                try {
+                    PaymentComputationPanel.getSummaryPanel().clearSummaryTextFields();
+                    PaymentComputationPanel.getDeductionsPanel().clearDeductionsTextFields();
+                    PaymentComputationPanel.getEarningsPanel().clearEarningsTextFields();
+                    PaymentComputationPanel.getReceivedPanel().clearEmployeeName();
+                    InformationPanel.getSalaryInformation().clearSalaryTextFields();
+                    InformationPanel.getEmployeeInformationPanel().clearEmployeePanelTextFields();
+                } catch (IllegalAccessException ex) {
+                
+                }
+            });
         add(clear);
             
         JButton exit = new JButton("Exit");
@@ -27,10 +38,5 @@ public class Buttons extends JPanel{
             });
             add(exit);
             
-    }
-    public void clearTextFields() {
-        for (JTextField textField : textFields) {
-            textField.setText("");
-        }
     }
 }
