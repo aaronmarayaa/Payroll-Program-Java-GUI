@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.Field;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -27,7 +28,7 @@ public class SalaryInformation extends JPanel {
     public SalaryInformation() {
             setLayout(null);
             
-        TitledBorder salary_border = BorderFactory.createTitledBorder("Salary Information");
+            TitledBorder salary_border = BorderFactory.createTitledBorder("Salary Information");
             salary_border.setTitleColor(Color.BLUE);
             setBorder(salary_border);
             setBackground(new Color(128, 128, 255));
@@ -164,5 +165,15 @@ public class SalaryInformation extends JPanel {
     }
     public JTextField getGrossPayTextField(){
         return grossPay_textField;
+    }
+    // clear all text fields
+    public void clearSalaryTextFields() throws IllegalAccessException {
+        Field[] fields = this.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            if (field.getType().equals(JTextField.class)) {
+                JTextField textField = (JTextField) field.get(this);
+                textField.setText("");
+            }
+        }
     }
 }
