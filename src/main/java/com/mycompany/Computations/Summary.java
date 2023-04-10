@@ -2,6 +2,7 @@ package com.mycompany.Computations;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.lang.reflect.Field;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -71,5 +72,15 @@ public class Summary extends JPanel {
     }
     public JTextField getNetPayPhpTextField(){
         return netPayPhp_textField;
+    }
+    // clear all text fields
+    public void clearSummaryTextFields() throws IllegalAccessException {
+        Field[] fields = this.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            if (field.getType().equals(JTextField.class)) {
+                JTextField textField = (JTextField) field.get(this);
+                textField.setText("");
+            }
+        }
     }
 }
