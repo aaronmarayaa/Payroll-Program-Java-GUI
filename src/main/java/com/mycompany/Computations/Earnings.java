@@ -2,6 +2,7 @@ package com.mycompany.Computations;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.lang.reflect.Field;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -9,6 +10,12 @@ import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
 public class Earnings extends JPanel {
+    
+    private JTextField transactionAllowance_textField;
+    private JTextField incentives_textField;
+    private JTextField uniformAllowance_textField;
+    private JTextField totalAllowance_textField;
+    
     Earnings() {
             setLayout(null);
             
@@ -44,20 +51,30 @@ public class Earnings extends JPanel {
             add(totalAllowance);
             
             //TEXT FIELDS
-            JTextField transactionAllowance_textField = new JTextField();
+            transactionAllowance_textField = new JTextField();
                 transactionAllowance_textField.setBounds(200, 40, 100, 20);
             add(transactionAllowance_textField);
                 
-            JTextField incentives_textField = new JTextField();
+            incentives_textField = new JTextField();
                 incentives_textField.setBounds(200, 65, 100, 20);
             add(incentives_textField);
                 
-            JTextField uniformAllowance_textField = new JTextField();
+            uniformAllowance_textField = new JTextField();
                 uniformAllowance_textField.setBounds(200, 90, 100, 20);
             add(uniformAllowance_textField);
                 
-            JTextField totalAllowance_textField = new JTextField();
+            totalAllowance_textField = new JTextField();
                 totalAllowance_textField.setBounds(200, 115, 100, 20);
             add(totalAllowance_textField);
+    }
+    // clear all text fields
+    public void clearEarningsTextFields() throws IllegalAccessException {
+        Field[] fields = this.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            if (field.getType().equals(JTextField.class)) {
+                JTextField textField = (JTextField) field.get(this);
+                textField.setText("");
+            }
+        }
     }
 }
