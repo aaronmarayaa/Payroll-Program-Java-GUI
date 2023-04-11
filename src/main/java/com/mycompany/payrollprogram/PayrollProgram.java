@@ -2,6 +2,7 @@ package com.mycompany.payrollprogram;
 
 import com.mycompany.Buttons.Buttons;
 import com.mycompany.Computations.Calculations;
+import com.mycompany.Computations.PaymentComputationPanel;
 import com.mycompany.Informations.InformationPanel;
 import java.awt.BorderLayout;
 import javax.swing.*;
@@ -28,12 +29,13 @@ public class PayrollProgram extends JFrame{
         add(informationPanel, BorderLayout.NORTH);
         
         // Pass `informationPanel` to access the `salaryInformation` Panel in `Calculations` panel
-        Calculations paymentComputationPanel = new Calculations(informationPanel);
+        PaymentComputationPanel paymentComputationPanel = new PaymentComputationPanel();
         add(paymentComputationPanel, BorderLayout.CENTER);
         
         Buttons buttons = new Buttons(frame);
         add(buttons, BorderLayout.SOUTH);
         
+        setTitle("Payroll Program");
         setSize(720, 620);
         setVisible(true);
         setResizable(false);
