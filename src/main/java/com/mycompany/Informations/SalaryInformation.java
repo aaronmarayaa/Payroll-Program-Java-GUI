@@ -26,14 +26,14 @@ public class SalaryInformation extends JPanel {
     private JButton compute_button;
     
     public SalaryInformation() {
-            setLayout(null);
-            
-            TitledBorder salary_border = BorderFactory.createTitledBorder("Salary Information");
-            salary_border.setTitleColor(Color.BLUE);
-            setBorder(salary_border);
-            setBackground(new Color(128, 128, 255));
-            setPreferredSize(new Dimension(300, 100));
-            
+
+        setLayout(null);
+        TitledBorder salary_border = BorderFactory.createTitledBorder("Salary Information");
+        salary_border.setTitleColor(Color.BLUE);
+        setBorder(salary_border);
+        setBackground(new Color(128, 128, 255));
+        setPreferredSize(new Dimension(300, 100));
+        
             //Labels
             JLabel salaryLevel = new JLabel("Salary Level:");
                 salaryLevel.setBounds(10, 15, 100, 20);
