@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 public class Received extends JPanel {
     
-        JLabel employee_name;
+    JLabel employee_name;
         
     public Received() {
         
