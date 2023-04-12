@@ -17,15 +17,15 @@ public class Earnings extends JPanel {
     private JTextField totalAllowance_textField;
     
     Earnings() {
-            setLayout(null);
-            
+
+        setLayout(null);
         TitledBorder earnings_border = BorderFactory.createTitledBorder("Earnings");
-            earnings_border.setTitleColor(Color.BLUE);
-            setBorder(earnings_border);
-            setBackground(new Color(128, 128, 255));
-            setPreferredSize(new Dimension(100, 157));
+        earnings_border.setTitleColor(Color.BLUE);
+        setBorder(earnings_border);
+        setBackground(new Color(128, 128, 255));
+        setPreferredSize(new Dimension(100, 157));
             
-            //Lables
+            // Labels
             JLabel allowance = new JLabel("Allowances");
                 allowance.setBounds(10, 15, 100, 20);
             add(allowance);
@@ -50,7 +50,7 @@ public class Earnings extends JPanel {
                 totalAllowance.setBounds(50, 115, 200, 20);
             add(totalAllowance);
             
-            //TEXT FIELDS
+            // TEXT FIELDS
             transactionAllowance_textField = new JTextField();
                 transactionAllowance_textField.setBounds(200, 40, 100, 20);
             add(transactionAllowance_textField);
@@ -77,4 +77,5 @@ public class Earnings extends JPanel {
             }
         }
     }
+
 }
