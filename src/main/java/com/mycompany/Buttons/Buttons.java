@@ -14,29 +14,28 @@ public class Buttons extends JPanel{
         
         add(new JButton("Print"));
         
+        // Clear button
         JButton clear = new JButton("Clear");
-            clear.addActionListener(e -> {
+            clear.addActionListener( e -> {
                 try {
                     PaymentComputationPanel.getSummaryPanel().clearSummaryTextFields();
                     PaymentComputationPanel.getDeductionsPanel().clearDeductionsTextFields();
                     PaymentComputationPanel.getEarningsPanel().clearEarningsTextFields();
                     PaymentComputationPanel.getReceivedPanel().clearEmployeeName();
-                    InformationPanel.getSalaryInformation().clearSalaryTextFields();
+                    InformationPanel.getSalaryInformationPanel().clearSalaryTextFields();
                     InformationPanel.getEmployeeInformationPanel().clearEmployeePanelTextFields();
                 } catch (IllegalAccessException ex) {
                 
                 }
             });
         add(clear);
-            
+
+        // Exit button 
         JButton exit = new JButton("Exit");
-            exit.addActionListener(new ActionListener(){
-                @Override
-                public void actionPerformed(ActionEvent e){
+            exit.addActionListener( e -> {
                     frame.dispose();
-                }
             });
-            add(exit);
+        add(exit);
             
     }
 }
