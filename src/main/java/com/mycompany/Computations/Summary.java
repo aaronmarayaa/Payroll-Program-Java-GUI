@@ -17,13 +17,13 @@ public class Summary extends JPanel {
     private JTextField netPayPhp_textField;
     
     public Summary() {
-            setLayout(null);
-            
-         TitledBorder summary_border = BorderFactory.createTitledBorder("Summary");
-            summary_border.setTitleColor(Color.BLUE);
-            setBorder(summary_border);
-            setBackground(new Color(128, 128, 255));
-            setPreferredSize(new Dimension(100, 150));
+
+        setLayout(null);    
+        TitledBorder summary_border = BorderFactory.createTitledBorder("Summary");
+        summary_border.setTitleColor(Color.BLUE);
+        setBorder(summary_border);
+        setBackground(new Color(128, 128, 255));
+        setPreferredSize(new Dimension(100, 150));
             
             // Labels
             JLabel grossPayPhp = new JLabel("GROSS PAY:                          PHP");
@@ -83,4 +83,5 @@ public class Summary extends JPanel {
             }
         }
     }
+    
 }
