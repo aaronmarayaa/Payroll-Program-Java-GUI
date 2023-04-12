@@ -28,7 +28,6 @@ public class PayrollProgram extends JFrame{
         InformationPanel informationPanel = new InformationPanel();
         add(informationPanel, BorderLayout.NORTH);
         
-        // Pass `informationPanel` to access the `salaryInformation` Panel in `Calculations` panel
         PaymentComputationPanel paymentComputationPanel = new PaymentComputationPanel();
         add(paymentComputationPanel, BorderLayout.CENTER);
         
