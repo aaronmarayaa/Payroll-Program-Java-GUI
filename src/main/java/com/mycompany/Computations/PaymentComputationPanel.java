@@ -16,7 +16,7 @@ public class PaymentComputationPanel extends JPanel {
         setLayout(new GridLayout(2, 2, 5, 0));
         
         // Calculations class instance
-        Calculations c = new Calculations();
+        Calculations calculations = new Calculations();
         
         // earnings panel
         earnings = new Earnings();
