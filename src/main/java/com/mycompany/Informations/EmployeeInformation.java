@@ -13,18 +13,17 @@ import javax.swing.border.TitledBorder;
 
 public class EmployeeInformation extends JPanel {
     
-        private JTextField employeeName_textField;
-        private JTextField address_textField;
+    private JTextField employeeName_textField;
+    private JTextField address_textField;
         
     public EmployeeInformation() {
                         
         setLayout(null);
-            
         TitledBorder employee_border = BorderFactory.createTitledBorder("Employee Information");
-            employee_border.setTitleColor(Color.BLUE);
-            setBorder(employee_border);
-            setBackground(new Color(128, 128, 255));
-            setPreferredSize(new Dimension(300, 75));
+        employee_border.setTitleColor(Color.BLUE);
+        setBorder(employee_border);
+        setBackground(new Color(128, 128, 255));
+        setPreferredSize(new Dimension(300, 75));
             
             //Labels
             JLabel month = new JLabel("Month:");
@@ -44,7 +43,7 @@ public class EmployeeInformation extends JPanel {
             add(address);
             
             //Text fields
-            String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Nov", "Dec"};
+            String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"};
             JComboBox<String> months_option = new JComboBox<>(months);
                 months_option.setBounds(70, 15, 150, 20);
             add(months_option);
@@ -80,4 +79,5 @@ public class EmployeeInformation extends JPanel {
             }
         }
     }
+    
 }
