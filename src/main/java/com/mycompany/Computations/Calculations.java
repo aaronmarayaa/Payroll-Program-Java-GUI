@@ -1,13 +1,12 @@
 package com.mycompany.Computations;
 
 import com.mycompany.Informations.InformationPanel;
-import com.mycompany.Informations.SalaryInformation;
 
 public class Calculations{
     public Calculations(){
                 
         InformationPanel.getSalaryInformationPanel().getComputeButton().addActionListener(e -> {
-                try{
+                try {
                     double hourlyRate = Double.parseDouble(InformationPanel.getSalaryInformationPanel().getSalaryRateTextField().getText()) / 8.0;
                     double regularPay_value = Double.parseDouble(InformationPanel.getSalaryInformationPanel().getHoursWorkingTextField().getText()) * hourlyRate;
                     InformationPanel.getSalaryInformationPanel().getRegularPayTextField().setText(String.format("%.2f", regularPay_value));
@@ -38,9 +37,19 @@ public class Calculations{
                         double late_arrival = Double.parseDouble(InformationPanel.getSalaryInformationPanel().getLateTextField().getText()) / 60.0;
                         double absences = Double.parseDouble(InformationPanel.getSalaryInformationPanel().getAbsentTextField().getText()) * Double.parseDouble(InformationPanel.getSalaryInformationPanel().getSalaryRateTextField().getText());
                         PaymentComputationPanel.getDeductionsPanel().getTardinessTextField().setText(String.format("%.2f", hourlyRate * late_arrival + absences));
-                } catch(NumberFormatException a){
-                    
-                }
+                } catch(NumberFormatException a) {}
+        });
+        
+        PaymentComputationPanel.getEarningsPanel().getUniformAllowanceTextField().addActionListener( e -> {
+            try {
+                double totalAllowance_value =
+                    Double.parseDouble(PaymentComputationPanel.getEarningsPanel().getTransactionAllowanceTextField().getText()) +
+                    Double.parseDouble(PaymentComputationPanel.getEarningsPanel().getIncentivesTextField().getText()) +
+                    Double.parseDouble(PaymentComputationPanel.getEarningsPanel().getUniformAllowanceTextField().getText());
+                
+                PaymentComputationPanel.getEarningsPanel().getTotalAllowanceTextField().setText(String.format("%.2f", totalAllowance_value));
+                PaymentComputationPanel.getSummaryPanel().getTotalAllowancePhpTextField().setText(String.format("%.2f", totalAllowance_value));
+            } catch(NumberFormatException a) {}
         });
     }
 }
