@@ -51,20 +51,21 @@ public class Earnings extends JPanel {
             add(totalAllowance);
             
             // TEXT FIELDS
-            transactionAllowance_textField = new JTextField();
+            transactionAllowance_textField = new JTextField("0");
                 transactionAllowance_textField.setBounds(200, 40, 100, 20);
             add(transactionAllowance_textField);
                 
-            incentives_textField = new JTextField();
+            incentives_textField = new JTextField("0");
                 incentives_textField.setBounds(200, 65, 100, 20);
             add(incentives_textField);
                 
-            uniformAllowance_textField = new JTextField();
+            uniformAllowance_textField = new JTextField("0");
                 uniformAllowance_textField.setBounds(200, 90, 100, 20);
             add(uniformAllowance_textField);
                 
-            totalAllowance_textField = new JTextField();
+            totalAllowance_textField = new JTextField("0");
                 totalAllowance_textField.setBounds(200, 115, 100, 20);
+                totalAllowance_textField.setEditable(false);
             add(totalAllowance_textField);
     }
     public JTextField getTransactionAllowanceTextField(){
@@ -85,7 +86,7 @@ public class Earnings extends JPanel {
         for (Field field : fields) {
             if (field.getType().equals(JTextField.class)) {
                 JTextField textField = (JTextField) field.get(this);
-                textField.setText("");
+                textField.setText("0");
             }
         }
     }

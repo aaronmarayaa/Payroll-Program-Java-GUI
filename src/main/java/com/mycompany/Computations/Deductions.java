@@ -61,28 +61,32 @@ public class Deductions extends JPanel {
             add(totalDeductions);
             
             // Text fields
-            peraSSS_textField = new JTextField();
+            peraSSS_textField = new JTextField("0");
                 peraSSS_textField.setBounds(200, 35, 100, 15);
             add(peraSSS_textField);
             
-            loanSSS_textField = new JTextField();
+            loanSSS_textField = new JTextField("0");
                 loanSSS_textField.setBounds(200, 55, 100, 15);
             add(loanSSS_textField);
             
-            gsis_textField = new JTextField();
+            gsis_textField = new JTextField("0");
                 gsis_textField.setBounds(200, 75, 100, 15);
+                gsis_textField.setEditable(false);
             add(gsis_textField);
             
-            taxWithheld_textField = new JTextField();
+            taxWithheld_textField = new JTextField("0");
                 taxWithheld_textField.setBounds(200,95, 100, 15);
+                taxWithheld_textField.setEditable(false);
             add(taxWithheld_textField);
             
-            tardiness_textField = new JTextField();
+            tardiness_textField = new JTextField("0");
                 tardiness_textField.setBounds(200,115, 100, 15);
+                tardiness_textField.setEditable(false);
             add(tardiness_textField);
             
-            totalDeductions_textField = new JTextField();
+            totalDeductions_textField = new JTextField("0");
                 totalDeductions_textField.setBounds(200,135, 100, 15);
+                totalDeductions_textField.setEditable(false);
             add(totalDeductions_textField);
     }
     public JTextField getPeraSSSTextField(){
@@ -109,7 +113,7 @@ public class Deductions extends JPanel {
         for (Field field : fields) {
             if (field.getType().equals(JTextField.class)) {
                 JTextField textField = (JTextField) field.get(this);
-                textField.setText("");
+                textField.setText("0");
             }
         }
     }

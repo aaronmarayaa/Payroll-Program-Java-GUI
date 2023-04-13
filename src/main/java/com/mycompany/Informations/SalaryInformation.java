@@ -76,37 +76,40 @@ public class SalaryInformation extends JPanel {
                 salaryLevel_textField.setBounds(100, 15, 45, 20);
             add(salaryLevel_textField);
             
-            salaryRate_textField = new JTextField();
+            salaryRate_textField = new JTextField("0");
                 salaryRate_textField.setBounds(100, 40, 100, 20);
                 salaryRate_textField.setEditable(false);
             add(salaryRate_textField);
             
-            late_textField = new JTextField();
+            late_textField = new JTextField("0");
                 late_textField.setBounds(45, 65, 50, 20);
             add(late_textField);
             
-            absent_textField = new JTextField();
+            absent_textField = new JTextField("0");
                 absent_textField.setBounds(150, 65, 50, 20);
             add(absent_textField);
             
-            hoursWorking_textField = new JTextField();
+            hoursWorking_textField = new JTextField("0");
                 hoursWorking_textField.setBounds(350, 15, 50, 20);
             add(hoursWorking_textField);
             
-            hoursOvertime_textField = new JTextField();
+            hoursOvertime_textField = new JTextField("0");
                 hoursOvertime_textField.setBounds(350, 40, 50, 20);
             add(hoursOvertime_textField);
             
-            regularPay_textField = new JTextField();
+            regularPay_textField = new JTextField("0");
                 regularPay_textField.setBounds(550, 15, 100, 20);
+                regularPay_textField.setEditable(false);
             add(regularPay_textField);
             
-            overtimePay_textField = new JTextField();
+            overtimePay_textField = new JTextField("0");
                 overtimePay_textField.setBounds(550, 40, 100, 20);
+                overtimePay_textField.setEditable(false);
             add(overtimePay_textField);
             
-            grossPay_textField = new JTextField();
+            grossPay_textField = new JTextField("0");
                 grossPay_textField.setBounds(550, 65, 100, 20);
+                grossPay_textField.setEditable(false);
             add(grossPay_textField);
             
             JButton ok_button = new JButton("Ok");
@@ -172,7 +175,7 @@ public class SalaryInformation extends JPanel {
         for (Field field : fields) {
             if (field.getType().equals(JTextField.class)) {
                 JTextField textField = (JTextField) field.get(this);
-                textField.setText("");
+                textField.setText("0");
             }
         }
     }

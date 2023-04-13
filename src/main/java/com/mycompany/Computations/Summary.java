@@ -44,20 +44,24 @@ public class Summary extends JPanel {
             add(netPayPhp);
             
             //Text Fields
-            grossPayPhp_textField = new JTextField();
+            grossPayPhp_textField = new JTextField("0");
                 grossPayPhp_textField.setBounds(200, 40, 100, 20);
+                grossPayPhp_textField.setEditable(false);
             add(grossPayPhp_textField);
                 
-            totalAllowancePhp_textField = new JTextField();
+            totalAllowancePhp_textField = new JTextField("0");
                 totalAllowancePhp_textField.setBounds(200, 65, 100, 20);
+                totalAllowancePhp_textField.setEditable(false);
             add(totalAllowancePhp_textField);
                 
-            totalDeductionsPhp_textField = new JTextField();
+            totalDeductionsPhp_textField = new JTextField("0");
                 totalDeductionsPhp_textField.setBounds(200, 90, 100, 20);
+                totalDeductionsPhp_textField.setEditable(false);
             add(totalDeductionsPhp_textField);
                 
-            netPayPhp_textField = new JTextField();
+            netPayPhp_textField = new JTextField("0");
                 netPayPhp_textField.setBounds(200, 115, 100, 20);
+                netPayPhp_textField.setEditable(false);
             add(netPayPhp_textField);
                 
     }
@@ -79,7 +83,7 @@ public class Summary extends JPanel {
         for (Field field : fields) {
             if (field.getType().equals(JTextField.class)) {
                 JTextField textField = (JTextField) field.get(this);
-                textField.setText("");
+                textField.setText("0");
             }
         }
     }
