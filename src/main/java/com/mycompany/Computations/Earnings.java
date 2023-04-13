@@ -67,6 +67,18 @@ public class Earnings extends JPanel {
                 totalAllowance_textField.setBounds(200, 115, 100, 20);
             add(totalAllowance_textField);
     }
+    public JTextField getTransactionAllowanceTextField(){
+        return transactionAllowance_textField;
+    }
+    public JTextField getIncentivesTextField(){
+        return incentives_textField;
+    }
+    public JTextField getUniformAllowanceTextField(){
+        return uniformAllowance_textField;
+    }
+    public JTextField getTotalAllowanceTextField(){
+        return totalAllowance_textField;
+    }
     // clear all text fields
     public void clearEarningsTextFields() throws IllegalAccessException {
         Field[] fields = this.getClass().getDeclaredFields();
