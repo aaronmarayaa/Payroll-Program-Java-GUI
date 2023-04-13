@@ -13,8 +13,8 @@ import javax.swing.border.TitledBorder;
 
 public class EmployeeInformation extends JPanel {
     
-    private JTextField employeeName_textField;
-    private JTextField address_textField;
+    private final JTextField employeeName_textField;
+    private final JTextField address_textField;
         
     public EmployeeInformation() {
                         

@@ -11,10 +11,10 @@ import javax.swing.border.TitledBorder;
 
 public class Summary extends JPanel {
     
-    private JTextField grossPayPhp_textField;
-    private JTextField totalAllowancePhp_textField;
-    private JTextField totalDeductionsPhp_textField;
-    private JTextField netPayPhp_textField;
+    private final JTextField grossPayPhp_textField;
+    private final JTextField totalAllowancePhp_textField;
+    private final JTextField totalDeductionsPhp_textField;
+    private final JTextField netPayPhp_textField;
     
     public Summary() {
 

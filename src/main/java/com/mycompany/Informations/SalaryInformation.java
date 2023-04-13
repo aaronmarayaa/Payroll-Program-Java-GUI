@@ -14,16 +14,16 @@ import javax.swing.border.TitledBorder;
 
 public class SalaryInformation extends JPanel {
     
-    private JTextField grossPay_textField;
-    private JTextField overtimePay_textField;
-    private JTextField regularPay_textField;
-    private JTextField hoursOvertime_textField;
-    private JTextField hoursWorking_textField;
-    private JTextField absent_textField;
-    private JTextField late_textField;
-    private JTextField salaryRate_textField;
-    private JTextField salaryLevel_textField;
-    private JButton compute_button;
+    private final JTextField grossPay_textField;
+    private final JTextField overtimePay_textField;
+    private final JTextField regularPay_textField;
+    private final JTextField hoursOvertime_textField;
+    private final JTextField hoursWorking_textField;
+    private final JTextField absent_textField;
+    private final JTextField late_textField;
+    private final JTextField salaryRate_textField;
+    private final JTextField salaryLevel_textField;
+    private final JButton compute_button;
     
     public SalaryInformation() {
 

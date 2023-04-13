@@ -11,12 +11,12 @@ import javax.swing.border.TitledBorder;
 
 public class Deductions extends JPanel {
     
-    private JTextField totalDeductions_textField;
-    private JTextField tardiness_textField;
-    private JTextField taxWithheld_textField;
-    private JTextField gsis_textField;
-    private JTextField loanSSS_textField;
-    private JTextField peraSSS_textField;
+    private final JTextField totalDeductions_textField;
+    private final JTextField tardiness_textField;
+    private final JTextField taxWithheld_textField;
+    private final JTextField gsis_textField;
+    private final JTextField loanSSS_textField;
+    private final JTextField peraSSS_textField;
     
     Deductions() {
         

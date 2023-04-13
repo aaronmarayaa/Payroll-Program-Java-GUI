@@ -11,10 +11,10 @@ import javax.swing.border.TitledBorder;
 
 public class Earnings extends JPanel {
     
-    private JTextField transactionAllowance_textField;
-    private JTextField incentives_textField;
-    private JTextField uniformAllowance_textField;
-    private JTextField totalAllowance_textField;
+    private final JTextField transactionAllowance_textField;
+    private final JTextField incentives_textField;
+    private final JTextField uniformAllowance_textField;
+    private final JTextField totalAllowance_textField;
     
     Earnings() {
 
