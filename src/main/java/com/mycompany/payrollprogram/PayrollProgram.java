@@ -1,7 +1,6 @@
 package com.mycompany.payrollprogram;
 
 import com.mycompany.Buttons.Buttons;
-import com.mycompany.Computations.Calculations;
 import com.mycompany.Computations.PaymentComputationPanel;
 import com.mycompany.Informations.InformationPanel;
 import java.awt.BorderLayout;
