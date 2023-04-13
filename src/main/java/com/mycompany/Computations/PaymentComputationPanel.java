@@ -15,9 +15,6 @@ public class PaymentComputationPanel extends JPanel {
 
         setLayout(new GridLayout(2, 2, 5, 0));
         
-        // Calculations class instance
-        Calculations calculations = new Calculations();
-        
         // earnings panel
         earnings = new Earnings();
         JPanel earnings_panel = new JPanel(new BorderLayout());
@@ -41,6 +38,10 @@ public class PaymentComputationPanel extends JPanel {
         JPanel received_panel = new JPanel(new BorderLayout());
             received_panel.add(received, BorderLayout.SOUTH);
         add(received_panel, BorderLayout.EAST);
+        
+        // Calculations class instance
+        Calculations calculations = new Calculations();
+
     }
     // gets panels instance
     public static final Received getReceivedPanel(){
