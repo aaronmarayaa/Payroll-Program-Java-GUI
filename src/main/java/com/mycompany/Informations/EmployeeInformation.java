@@ -15,6 +15,7 @@ public class EmployeeInformation extends JPanel {
     
     private final JTextField employeeName_textField;
     private final JTextField address_textField;
+    private final JComboBox<String> positions_option;
         
     public EmployeeInformation() {
                         
@@ -49,7 +50,7 @@ public class EmployeeInformation extends JPanel {
             add(months_option);
             
             String[] positions = {"Merchandiser", "Bagger", "Cashier"};
-            JComboBox<String> positions_option = new JComboBox<>(positions);
+            positions_option = new JComboBox<>(positions);
                 positions_option.setBounds(70, 40, 150, 20);
             add(positions_option);
             
@@ -68,6 +69,16 @@ public class EmployeeInformation extends JPanel {
             address_textField = new JTextField();
                 address_textField.setBounds(400, 40, 200, 20);
             add(address_textField);
+    }
+    public JTextField getEmployeeNameTextField(){
+        return employeeName_textField;
+    }
+    public JTextField getAddressTextField(){
+        return address_textField;
+    }
+    public String getComboBoxItem(){
+            String selectedItem = (String) positions_option.getSelectedItem();
+        return selectedItem;
     }
     // clear all text fields
     public void clearEmployeePanelTextFields() throws IllegalAccessException {
