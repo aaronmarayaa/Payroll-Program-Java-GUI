@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -96,6 +97,7 @@ public class Buttons extends JPanel{
                 printFrame.setResizable(false);
                 printFrame.setVisible(true);
                 printFrame.setSize(500, 350);
+                printFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
                 printFrame.setLocationRelativeTo(null);
             });
         add(print);
