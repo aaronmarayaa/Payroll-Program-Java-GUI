@@ -19,7 +19,7 @@ public class TitleDatePanel extends JPanel {
         add(payroll, BorderLayout.WEST);
         
         LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, MMMM d, hh;mm:ss a");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, MMMM d, hh:mm:ss a");
         String formatted = now.format(formatter);
         JLabel dateTime = new JLabel("Date: " + formatted);
             dateTime.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 50));

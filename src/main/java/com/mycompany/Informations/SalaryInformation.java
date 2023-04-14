@@ -72,7 +72,7 @@ public class SalaryInformation extends JPanel {
             add(grossPay);
             
             //Text fields
-            salaryLevel_textField = new JTextField();
+            salaryLevel_textField = new JTextField("0");
                 salaryLevel_textField.setBounds(100, 15, 45, 20);
             add(salaryLevel_textField);
             
